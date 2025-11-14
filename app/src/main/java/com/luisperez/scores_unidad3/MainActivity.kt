@@ -13,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.luisperez.scores_unidad3.ui.navigation.NavManager
 import com.luisperez.scores_unidad3.ui.theme.Scores_unidad3Theme
 
 class MainActivity : ComponentActivity() {
@@ -21,15 +22,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Scores_unidad3Theme {
-                val
-                Scaffold(modifier = Modifier.fillMaxSize(),
-                    bottomBar = {
-                        NavigationBar(windowInsets = NavigationBarDefaults.windowInsets) {
-
-                        }
-                    }) { innerPadding ->
-
-                }
+                NavManager()
             }
         }
     }
