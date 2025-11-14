@@ -1,3 +1,10 @@
 package com.luisperez.scores_unidad3.domain.model
 
-data class Student()
+data class Student(
+    val id: String,
+    val name: String,
+    val lastName: String,
+    val grade: Int,
+    val group: Char,
+    val score: Double
+)
