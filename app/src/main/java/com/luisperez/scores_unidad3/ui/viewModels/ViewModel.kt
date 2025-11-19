@@ -10,13 +10,8 @@ class ViewModel(navController: NavController) {
         Student(3, "c", "c-c", 1, 'A', 10.2)
     )
 
-    //ESTAS DOS LISTAS SON DE PRUEBA SOLAMENTE!!!!!!!!!
+    //PRUEBA SOLAMENTE!!!!!!!!!
     //SE SUPONE QUE AL TENER LA VISTA DE ADD STUDENT ESTO CAMBIARÍA.
-    var studentsB = listOf<Student>(
-        Student(1, "a", "a-a", 9, 'B', 50.2),
-        Student(2, "b", "b-b", 9, 'B', 99.9),
-        Student(3, "c", "c-c", 9, 'B', 83.7)
-    )
 
     fun getScoresA() {
         var scoreSum: Double = 0.0
@@ -34,9 +29,17 @@ class ViewModel(navController: NavController) {
     } //wtf sería lo mismo para cada lista(?)
 
     fun minAverage() {
-        studentsA.sor
+        var mAverage = studentsA.sortedBy { it.score }
+        mAverage.take(3)
+        println(mAverage)
+    }
+
+    fun maxAverage(){
+        var gAverage = studentsA.sortedByDescending { it.score }
+        gAverage.take(3)
+        println(gAverage)
     }
 
     //sortedByDescending = mayor a menor
-    //sortBy = menor a mayor
+    //sortedBy = menor a mayor
 }

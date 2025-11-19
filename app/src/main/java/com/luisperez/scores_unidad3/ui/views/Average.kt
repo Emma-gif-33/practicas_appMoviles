@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.luisperez.scores_unidad3.domain.model.Student
+import com.luisperez.scores_unidad3.ui.viewModels.ViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -31,7 +32,10 @@ fun Average(navController: NavController){
 }
 
 @Composable
-fun AverageContent(paddingValues: PaddingValues, navController: NavController){
+fun AverageContent(
+    paddingValues: PaddingValues,
+    navController: NavController,
+){
     LazyColumn (
         modifier = Modifier
             .padding(10.dp)
